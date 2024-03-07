@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 const useRestaurant = (id) => {
     const [restaurant, setRestaurant] = useState(null);
     const [restaurantMenu, setRestaurantMenu] = useState (null);
+    console.log('useRestaurant called')
 
     useEffect(() => {
         getRestaurantInfo();

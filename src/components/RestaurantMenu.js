@@ -3,14 +3,19 @@ import useRestaurant from "../utils/useRestaurant";
 import NoInternet from "./NoInternet";
 import useOnline from "../utils/useOnline";
 import { IMG_CDN_URL } from "../../constants";
-import SkeletonMenu from "./skeletons/skeletonMenu";
+import SkeletonMenu from "./skeletons/SkeletonMenu";
+import { addItem } from "../utils/cartSlice";
+import { useDispatch } from "react-redux";
 
 const RestaurantMenu = () => {
     const { id } = useParams();
     const [restaurant, restaurantMenu] = useRestaurant(id) // fetching data from API and storing it into state variable restaurant is written inside this custom hook
-    console.log(Array.isArray(restaurant))
-    console.log(restaurant)
 
+    const dispatch = useDispatch()
+    const handleAddFoodItem = (item) => {
+        dispatch(addItem(item))  // dispatches the addItem action
+    }
+   
     const isOnline = useOnline()
     if (!isOnline) {
         return <NoInternet />
@@ -23,10 +28,11 @@ const RestaurantMenu = () => {
     const { name, areaName, costForTwoMessage, cuisines, avgRating, cloudinaryImageId } = restaurant;
     const menuCategories = restaurantMenu;
 
+    
 
 
     return (
-<div className="container sm:w-5/6 md:w-4/6 lg:w-3/6 mx-auto shadow-2xl">
+        <div className="container sm:w-5/6 md:w-4/6 lg:w-3/6 mx-auto shadow-2xl">
             <div className="rounded-md my-8 p-6  shadow-2xl ">
                 {/* About shop */}
                 <div className="flex flex-col md:flex-row items-center md:items-start">
@@ -63,18 +69,16 @@ const RestaurantMenu = () => {
                                             </div>
                                         </div>
                                         <div className="bg-yellow-50 p-3 flex justify-between">
-                                            <button className="text-sm md:text-base text-green-800">Add to Cart</button>
-                                            <button className="text-sm md:text-base text-green-800">View Details</button>
+                                            <button className="text-sm md:text-base text-white bg-orange-500 py-2 px-3 rounded hover:bg-orange-600" onClick={() => handleAddFoodItem(item?.card?.info)}>Add to Cart</button>
+                                            <button className="text-sm md:text-base text-green-800 underline">View Details</button>
                                         </div>
                                     </div>
                                 ))}
                             </div>
                         ))}
                 </div>
-
             </div>
-        </div>        
-
+        </div>
     );
 }
 

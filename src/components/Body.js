@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { restaurantList } from "../../constants";
 import RestaurantCard from "./RestauantCard";
-import SkeletonCard from "./skeletons/SkeletonCard"
+import SkeletonCard from "./skeletons/SkeletonCard";
 import { filterData } from "../utils/helper";
 import useOnline from "../utils/useOnline";
 import NoInternet from "./NoInternet";
@@ -32,9 +32,9 @@ const Body = () => {
   }
 
   return (
-    <div className="container m-auto">
+    <div className="container md-auto">
       {/* Search box */}
-      <div className="my-5 ml-12 sm:ml-3  w-72  flex  items-center border border-green-900 rounded">
+      <div className="my-5 ml-12 sm:ml-3  w-72  flex  items-center  rounded">
         <input
           type="text"
           className="p-2 outline-none border border-gray-200 rounded "

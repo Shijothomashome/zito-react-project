@@ -1,3 +1,7 @@
 {
-    // "plugins": [ ["transform-remove-console", { "exclude": [ "error", "warn"] }] ]
+    // "plugins": [ ["transform-remove-console", { "exclude": [ "error", "warn"] }] ] // --> clears all the console.logs 
+    // "presets": [
+    //     ["@babel/preset-env", {"targets": {"node": "current"}}], // --> make 'import' understandable for jest
+    //     ["@babel/preset-react", {"runtime": "automatic"}]   // --> make 'jsx codes' understandable for jest
+    // ] 
 }
