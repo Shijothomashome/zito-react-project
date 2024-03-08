@@ -8,7 +8,7 @@ const cartSlice = createSlice({
     },
     reducers: {
         addItem: (state, action) => {  
-            // addItem is the name of action which calls the reducer function, reducer function takes in two params state and action payload
+            // addItem is the name of action which calls the reducer function, reducer function takes-In two params state and action payload
             state.items.push(action.payload)
         },
         removeItem: (state, action) => {

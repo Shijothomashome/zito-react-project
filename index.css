@@ -1,3 +1,16 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+@layer utilities {
+    .bullet-point::before {
+      content: "\2022"; /* Unicode for bullet point character */
+      display: inline-block;
+      width: 1em; /* Adjust as needed */
+      margin-right: 0.5em; /* Adjust as needed */
+      color: black; /* Adjust color as needed */
+    }
+  }

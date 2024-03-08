@@ -18,10 +18,12 @@ const Body = () => {
   async function getRestaurants() {
     setTimeout(async () => {
 
-      const data = await fetch("https://www.swiggy.com/api/seo/getListing?lat=9.9816358&lng=76.2998842");
+      // const data = await fetch("https://www.swiggy.com/api/seo/getListing?lat=9.9816358&lng=76.2998842");
+      const data = await fetch("https://foodfire.onrender.com/api/restaurants?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING");
       const json = await data.json();
-      setAllRestaurants(json?.data?.success?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-      setFilteredRestaurants(json?.data?.success?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+
+      setAllRestaurants(json?.data?.cards?.[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+      setFilteredRestaurants(json?.data?.cards?.[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
 
     }, 0)
   }
@@ -32,7 +34,7 @@ const Body = () => {
   }
 
   return (
-    <div className="container md-auto">
+    <div className="container mx-auto">
       {/* Search box */}
       <div className="my-5 ml-12 sm:ml-3  w-72  flex  items-center  rounded">
         <input

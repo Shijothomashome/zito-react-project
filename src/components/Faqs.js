@@ -25,7 +25,7 @@ const Faqs = () => {
             <Section
                 title= {"About Faqs"}
                 description= {"On the other hand, we denounce with righteous indignation and dislike me"}
-                isVisible= {visibleSection === "about"}
+                isVisible = {visibleSection === "about"}
                 setIsVisible= { (Bool) => Bool? setIsVisibleSection("about"): setIsVisibleSection("")}
             />
             <Section

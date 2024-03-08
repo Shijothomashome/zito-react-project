@@ -25,3 +25,7 @@ export const authentication = () => {   // normal function which updates state v
     return [isLoggedIn, login, logout]
 }
 
+export const extractName = (str) => {
+  const match = str.match(/^[^\[\(]+/)
+  return match ? match[0].trim() : str.trim()
+}

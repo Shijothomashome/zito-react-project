@@ -97,7 +97,7 @@ const Header = () => {
               to="/cart"
               className="relative p-1 focus:outline-none mx-6 sm:mr-16"
             >
-              <i class="text-2xl fa-solid fa-cart-shopping"></i>
+              <i className="text-2xl fa-solid fa-cart-shopping"></i>
               <span className="absolute -right-2 -top-0.5 rounded-full text-center text-white h-5 w-5 bg-green-600 flex items-center justify-center">
                 <span data-testid="cart" >{cartItems.length}</span>
               </span>
