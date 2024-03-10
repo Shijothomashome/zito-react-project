@@ -7,7 +7,7 @@ import { MENU_IMG_CDN_URL } from "../../constants";
 import SkeletonMenu from "./skeletons/SkeletonMenu";
 import { addItem } from "../utils/cartSlice";
 import { useDispatch } from "react-redux";
-import dummy_food_image from "../images/dummy_food_image.jpg"
+import dummy_food_image from "../images/dummy_food_image.png"
 import { extractName } from "../utils/helper";
 import { useState } from "react";
 
@@ -18,7 +18,7 @@ const Section = ({ index, category, isVisible, setIsVisible }) => {
         dispatch(addItem(item))  // dispatches the addItem action
     }
     return(
-    <div key={index} className="mb-8 w-9/12 mx-auto">
+    <div key={index} className="mb-8 w-9/12 mx-auto ">
         <div className="border-b border-gray-300 w-full h-px my-6"></div>
 
         {isVisible ? (<div className="rounded flex justify-between items-center cursor-pointer p-1 pl-3 bg-gray-100" onClick={() => setIsVisible(false)}>
@@ -35,7 +35,8 @@ const Section = ({ index, category, isVisible, setIsVisible }) => {
                 <div className="p-4">
                     <div className="flex flex-col  md:flex-row justify-between items-center mb-3 gap-3">
                         <h3 className="text-lg text-black font-semibold  md:w-1/2 flex-1">{extractName(item?.card?.info?.name)}</h3>
-                        <p className="font-semibold text-green-700 flex-1">&#8377; {Math.ceil(item?.card?.info?.price / 200) || Math.ceil(item?.card?.info?.defaultPrice/200)}</p>
+                        {console.log(`${typeof item.card.info.price }`)}
+                        <p className="font-semibold text-green-700 flex-1">&#8377; {((item?.card?.info?.price / 200) || (item?.card?.info?.defaultPrice/200).toFixed(2))}</p>
                         <div className="relative  mx-auto flex-1">
                             {item?.card?.info?.imageId ? (
                                 <img src={MENU_IMG_CDN_URL + item?.card?.info?.imageId} alt='food image' className=" w-52 h-36 object-cover rounded-lg" />

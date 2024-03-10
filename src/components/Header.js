@@ -4,6 +4,8 @@ import zito from "../images/zito.png"
 import { useSelector } from "react-redux";
 import { authentication } from "../utils/helper";
 import user_logo from '../images/user_logo.png'
+import Notifications from "./Notifications";
+
 
 const Logo = () => (
   <Link to='/'>
@@ -16,8 +18,8 @@ const Header = () => {
   const [isLoggedIn, login, logout] = authentication();
 
   // subscribing the store using useSelector hook
-  const cartItems = useSelector(store => store.cart.items)  // SUBSCRIBING TO CART SLICE OF STORE
-  console.log(cartItems);
+  const cartItems = useSelector(store => store.cart.items)  // SUBSCRIBING TO CART SLICE OF STORE\
+  const notifications = useSelector(store => store.cart.notification)
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
@@ -47,6 +49,7 @@ const Header = () => {
     <nav className="bg-white border shadow-md py-0 fixed top-0 left-0 right-0 z-10">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
+          {notifications && <Notifications /> }
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <button
               type="button"

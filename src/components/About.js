@@ -23,15 +23,9 @@ class About extends React.Component {
 
         return (
             <div class="bg-gray-100 -mt-[14px]">
-                <div className="py-7  bg-gray-800 text-white">
-                    <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase text-center">About Us</h2>
-                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl text-center">
-                        Our Story
-                    </p>
-                    <p className="text-center mt-5">{Our_quote}</p>
-                </div>
+                
 
-                <div class="max-w-7xl mx-auto px-4 mb-5 p-5 w-3/4 rounded-lg">
+                <div class="max-w-7xl mx-auto px-4 mb-5 p-5 w-3/4 rounded-lg pt-12">
                     <p class="mt-4 max-w-2xl text-xl lg:mx-auto text-center italic underline font-semibold">Our Founder {founder}</p>
 
                     <p class="mt-4 max-w-2xl text-xl lg:mx-auto text-center italic">{message}</p>

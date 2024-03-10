@@ -4,13 +4,23 @@
 @tailwind utilities;
 
 
+  /* Fonts used */
+  .madimi-one-regular {
+    font-family: "Madimi One", sans-serif;
+  }
+  
+  .m-plus-rounded-1c-regular {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+  }
+ 
+  .bricolage-grotesque {
+    font-family: "Bricolage Grotesque", sans-serif;
+  }
 
-@layer utilities {
-    .bullet-point::before {
-      content: "\2022"; /* Unicode for bullet point character */
-      display: inline-block;
-      width: 1em; /* Adjust as needed */
-      margin-right: 0.5em; /* Adjust as needed */
-      color: black; /* Adjust color as needed */
-    }
+  .sans-serif {
+    font-family: sans-serif;
+  }
+
+  body{
+    font-family: "Bricolage Grotesque", sans-serif;
   }

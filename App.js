@@ -64,7 +64,7 @@ const appRouter = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // passing react element inside root
 root.render(
-  <div className='pt-20'>
+  <div className='pt-[66px]'>
     <RouterProvider router={appRouter} />
   </div>
 );
