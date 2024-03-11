@@ -40,7 +40,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <Suspense fallback={<div>loading...</div>}><About /></Suspense> //play in network using slow 3G to understand
+        element: <Suspense fallback={<div>{/* shimmer effect can be applied */}</div>}><About /></Suspense> //play in network using slow 3G to understand
       },
       {
         path: "/contact",
