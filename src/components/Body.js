@@ -85,7 +85,7 @@ const Body = () => {
       {(allRestaurants?.length === 0) ? (
         <SkeletonFilter />
       ) : (
-        <div className="overflow-x-auto scrollbar-hidden mx-6 sm:mx-10  sm:pl-12 md:pl-4 mt-7 mb-4">
+        <div className="overflow-x-auto  no-scrollbar overflow-y-scroll mx-6 sm:mx-10  sm:pl-12 md:pl-4 mt-7 mb-4">
           <ul className="flex lg:justify-center gap-3 py-1 sm:pl-6 md:-ml-7  whitespace-nowrap text-gray-600 text-base text font-medium">
             <li className=" hover:text-gray-950 cursor-pointer p-1  px-5 rounded-full border border-gray-300"><Link onClick={() => {
               const data = filterData("", allRestaurants);
