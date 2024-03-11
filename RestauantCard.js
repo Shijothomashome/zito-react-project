@@ -5,8 +5,8 @@ import { IMG_CDN_URL } from "../../constants";
 const RestaurantCard = ({ id, cloudinaryImageId, name, cuisines, areaName, sla, costForTwo, avgRating, }) => {
 
   return (
-    <Link className=" relative  rounded mb-6 w-72 sm:w-60 mx-3 sm:my-4 text-black transform sm:hover:scale-95 transition-transform duration-200" to={`/restaurant/${id}`}>
-      <div>
+    <Link className=" relative  rounded mb-6 w-72 sm:w-60 mx-3 sm:my-4  text-black" to={`/restaurant/${id}`}>
+      <div className='card '>
         <img className="rounded-2xl" src={IMG_CDN_URL + cloudinaryImageId} />
         <div className="px-2">
           <h2 className="font-semibold text-l uppercase mt-4 my-2 overflow-hidden whitespace-nowrap overflow-ellipsis">{name}</h2>

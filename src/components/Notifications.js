@@ -15,7 +15,7 @@ const Notifications = () => {
         if (notification) {
             const timer = setTimeout(() => {  // Dispatch clearNotification action to clear the notification after 3 seconds
                 dispatch(clearNotification());
-            }, 2000);
+            }, 1000);
 
             // Cleanup function to clear the timeout when the component unmounts or when notification changes
             return () => clearTimeout(timer);
@@ -23,10 +23,10 @@ const Notifications = () => {
     }, [notification, dispatch]);
 
     return (
-        <div className="absolute left-1/2 transform -translate-x-1/2 -bottom-[23px] bg-green-600 text-sm py-1 px-4 text-white rounded">
-            {notification && <div className={`${notification.type}`}>
+        <div className="absolute left-1/2 transform -translate-x-1/2 -bottom-[23px] ">
+            {notification && <div className={`${notification.type} animate-bounce  bg-green-600 text-sm py-1 px-4 text-white rounded`}>
                 {notification.message}
-                 &nbsp;<i className="fa-solid fa-check"></i>
+                 &nbsp;<i className="fa-solid fa-check "></i>
             </div>}
         </div>
     )

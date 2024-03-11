@@ -12,6 +12,9 @@ import { Provider } from 'react-redux';
 import store from './src/utils/store';
 import Cart from './src/components/Cart';
 import Faqs from './src/components/Faqs';
+import Login from './src/components/Login';
+import Signup from './src/components/Signup';
+
 
 
 const AppLayout = () => {
@@ -54,6 +57,14 @@ const appRouter = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart />
+      },
+      {
+        path: "/login",
+        element: <Login />
+      },
+      {
+        path: "/signup",
+        element: <Signup />
       }
     ]
   }

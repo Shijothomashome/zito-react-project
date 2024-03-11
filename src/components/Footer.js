@@ -1,9 +1,12 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
   
-    <footer className="bg-black text-white  py-8">
+    <footer className="bg-black text-gray-400  py-8">
       <div className="container mx-auto flex flex-col md:flex-row justify-between px-4 sm:gap-10">
         <div className="md:w-1/3">
           <h2 className="text-xl font-bold mb-4 text-orange-400">About Us</h2>
@@ -21,15 +24,18 @@ const Footer = () => {
         <div className="md:w-1/3 mt-6 md:mt-0">
           <h2 className="text-xl font-bold mb-4 text-orange-400">Follow Us</h2>
           <div className="flex items-center space-x-4">
-            <a href="#" className="text-lg">
-              <i className="fab fa-facebook-square "></i>
-            </a>
-            <a href="#" className="text-lg">
-            <i className="fa-brands fa-x-twitter"></i>
-            </a>
-            <a href="#" className="text-lg ">
-              <i className="fab fa-instagram-square"></i>
-            </a>
+            <Link target="_blank" to="https://www.facebook.com/shijo.thomas.71066?mibextid=JRoKGi" className="text-lg">
+              <i className="fab fa-facebook-square text-gray-100 "></i>
+            </Link>
+            <Link target="_blank" to="https://linkedin.com/in/shijo-thomas-home" className="text-lg">
+            <i className="fa-brands fa-x-twitter text-gray-100"></i>
+            </Link>
+            <Link target="_blank" to="https://www.instagram.com/_shijo_thomas_____/" className="text-lg ">
+              <i className="fab fa-instagram-square text-gray-100"></i>
+            </Link>
+            <Link target="_blank" to="https://linkedin.com/in/shijo-thomas-home" className="text-lg ">
+            <i class="fa-brands fa-linkedin text-gray-100"></i>
+            </Link>
           </div>
         </div>
       </div>

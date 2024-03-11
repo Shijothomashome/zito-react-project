@@ -40,6 +40,10 @@ const Header = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const closeProfileMenu = () => {
+    setIsProfileMenuOpen(false)
+  }
+
   // Toggling profile menu
   const toggleProfileMenu = () => {
     setIsProfileMenuOpen(prevState => !prevState);
@@ -133,13 +137,10 @@ const Header = () => {
                   aria-labelledby="user-menu-button"
                   tabIndex="-1"
                 >
-                  <Link to="#" className="block px-4 py-2 text-sm" role="menuitem" tabIndex="-1" id="user-menu-item-0">
-                    Your Profile
-                  </Link>
-                  <Link to="#" className="block px-4 py-2 text-sm" role="menuitem" tabIndex="-1" id="user-menu-item-2">
+                  <Link to="/login" onClick={closeProfileMenu} className="block px-4 py-2 text-sm" role="menuitem" tabIndex="-1" id="user-menu-item-2">
                     Login
                   </Link>
-                  <Link to="#" className="block px-4 py-2 text-sm" role="menuitem" tabIndex="-1" id="user-menu-item-2">
+                  <Link to="/signup" onClick={closeProfileMenu} className="block px-4 py-2 text-sm" role="menuitem" tabIndex="-1" id="user-menu-item-2">
                     SignUP
                   </Link>
                 </div>
