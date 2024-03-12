@@ -43,7 +43,7 @@ const useRestaurant = (id) => {
                 console.error("Restaurant information not found in the API response");
                 // Handle case where restaurant information is not found
             }
-        },5000)
+        },2000)
         } catch (error) {
             console.error("Error fetching restaurant info:", error);
             // Handle error (e.g., show error message to the user)

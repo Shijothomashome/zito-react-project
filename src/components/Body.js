@@ -28,7 +28,7 @@ const Body = () => {
       setAllRestaurants(json?.data?.cards?.[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
       setFilteredRestaurants(json?.data?.cards?.[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
 
-    }, 5000)
+    }, 2000)
   }
 
   console.log(allRestaurants)
@@ -87,34 +87,34 @@ const Body = () => {
       ) : (
         <div className="overflow-x-auto  no-scrollbar overflow-y-scroll mx-6 sm:mx-10  sm:pl-12 md:pl-4 mt-7 mb-4">
           <ul className="flex lg:justify-center gap-3 py-1 sm:pl-6 md:-ml-7  whitespace-nowrap text-gray-600 text-base text font-medium">
-            <li className=" hover:text-gray-950 cursor-pointer p-1  px-5 rounded-full border border-gray-300"><Link onClick={() => {
+            <Link className=" hover:text-gray-950 cursor-pointer p-1  px-5 rounded-full border border-gray-300" onClick={() => {
               const data = filterData("", allRestaurants);
               setFilteredRestaurants(data);
-            }}>All Restaurants</Link></li>
-            <li className=" hover:text-gray-950 cursor-pointer p-1  px-5 rounded-full border border-gray-300"><Link onClick={() => {
+            }}>All Restaurants</Link>
+            <Link className=" hover:text-gray-950 cursor-pointer p-1  px-5 rounded-full border border-gray-300" onClick={() => {
               const data = filterByRatings(4, allRestaurants);
               setFilteredRestaurants(data);
-            }}>Ratings 4.O+</Link></li>
-            <li className=" hover:text-gray-950 cursor-pointer p-1  px-5 rounded-full border border-gray-300"><Link onClick={() => {
+            }}>Ratings 4.O+</Link>
+            <Link className=" hover:text-gray-950 cursor-pointer p-1  px-5 rounded-full border border-gray-300" onClick={() => {
               const data = filterByRatings(4.5, allRestaurants);
               setFilteredRestaurants(data);
-            }}>Ratings 4.5+</Link></li>
-            <li className=" hover:text-gray-950 cursor-pointer p-1  px-5 rounded-full border border-gray-300"><Link onClick={() => {
+            }}>Ratings 4.5+</Link>
+            <Link className=" hover:text-gray-950 cursor-pointer p-1  px-5 rounded-full border border-gray-300" onClick={() => {
               const data = filterByVeg(true, allRestaurants);
               setFilteredRestaurants(data);
-            }}>Pure Veg</Link></li>
-            <li className=" hover:text-gray-950 cursor-pointer p-1  px-5 rounded-full border border-gray-300"><Link onClick={() => {
+            }}>Pure Veg</Link>
+            <Link className=" hover:text-gray-950 cursor-pointer p-1  px-5 rounded-full border border-gray-300" onClick={() => {
               const data = filterByDistance(4, allRestaurants);
               setFilteredRestaurants(data);
-            }}>Within 4km</Link></li>
-            <li className=" hover:text-gray-950 cursor-pointer p-1  px-5 rounded-full border border-gray-300"><Link onClick={() => {
+            }}>Within 4km</Link>
+            <Link className=" hover:text-gray-950 cursor-pointer p-1  px-5 rounded-full border border-gray-300" onClick={() => {
               const data = filterByPriceLessThan_300(300, allRestaurants);
               setFilteredRestaurants(data)
-            }} >Less than Rs.300</Link></li>
-            <li className=" hover:text-gray-950 cursor-pointer p-1  px-5 rounded-full border border-gray-300"><Link onClick={() => {
+            }} >Less than Rs.300</Link>
+            <Link className=" hover:text-gray-950 cursor-pointer p-1  px-5 rounded-full border border-gray-300" onClick={() => {
               const data = filterByPriceBetween_300_and_600(300, 600, allRestaurants);
               setFilteredRestaurants(data)
-            }}>Rs.300-Rs.600</Link></li>
+            }}>Rs.300-Rs.600</Link>
           </ul>
         </div>
       )}

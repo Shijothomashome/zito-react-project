@@ -48,7 +48,7 @@ const Cart = () => {
 
     return (
 
-        <div className="py-4  px-4 sm:px-6 lg:px-8  lg:mb-0 bg-gray-100">
+        <div className="py-4  px-4 sm:px-6 lg:px-8  lg:mb-0 bg-gray-100 min-h-screen">
                 <h2 className="text-xl font-bold mb-4 text-center sans-serif text-gray-600 underline ">My Cart</h2>
                 {cartItems.length === 0 ? (
                     <div className="flex lg:flex-row flex-col gap-10 lg:gap-3 justify-center items-center">
@@ -96,7 +96,7 @@ const Cart = () => {
                                         </div>
                                     </div>
                                     <div>
-                                        <span className="text-base  text-gray-600 sans-serif"> {`${item.quantityCount} x ${((item.price / 200) || (item.defaultPrice / 200)).toFixed(2)} = \u20B9 ${((item.price / 200) || (item.defaultPrice / 200)) * item.quantityCount.toFixed(2)}`}</span>
+                                        <span className="text-base whitespace-nowrap  text-gray-600 sans-serif"> {`${item.quantityCount} x ${((item.price / 200) || (item.defaultPrice / 200)).toFixed(2)} = \u20B9 ${((item.price / 200) || (item.defaultPrice / 200)).toFixed(2) * item.quantityCount.toFixed(2)}`}</span>
                                     </div>
                                 </li>
                             ))}
