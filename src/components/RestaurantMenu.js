@@ -18,14 +18,14 @@ const Section = ({ index, category, isVisible, setIsVisible }) => {
         dispatch(addItem(item))  // dispatches the addItem action
     }
     return(
-    <div key={index} className="mb-2  mx-auto ">
+    <div key={index} className="mb-2">
 
         {isVisible ? (
-        <div className="rounded flex justify-between items-center cursor-pointer p-1 pl-3 border border-gray-00" onClick={() => setIsVisible(false)}>
+        <div className="rounded flex justify-between items-center cursor-pointer p-1  border border-gray-00" onClick={() => setIsVisible(false)}>
             <h6 className="text-lg font-medium mb-0 text-black">{category?.card?.card?.title}</h6>
             <i className="fa-solid fa-angle-up mr-2"></i>
         </div>) : (
-            <div className="rounded flex justify-between items-center cursor-pointer p-1 pl-3 border border-dotted border-gray-400" onClick={() => setIsVisible(true)}>
+            <div className="rounded flex justify-between items-center cursor-pointer p-1  border border-dotted border-gray-400" onClick={() => setIsVisible(true)}>
                 <h2 className="text-lg font-medium mb-0 text-black">{category?.card?.card?.title}</h2>
                 <i className="fa-solid fa-angle-down mr-2"></i>
             </div>)}
@@ -104,7 +104,7 @@ const RestaurantMenu = () => {
 
     return (
         <div>
-            <div className=" rounded-md mb-8 -mt-6 p-6 -mx-6">
+            <div className=" rounded-md mb-8 -mt-6 pt-6 min-h-screen ">
                 {/* About shop */}
                 <div className="bg-black p-10 md:px-32 text-white flex flex-col md:flex-row items-center md:items-start ">
                     <img className="rounded-md w-48 h-48 md:w-64 md:h-auto md:mr-8" src={IMG_CDN_URL + cloudinaryImageId} alt={name} />

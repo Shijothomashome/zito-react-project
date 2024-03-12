@@ -3,11 +3,11 @@ import Shimmer from "./Shimmer";
 
 const SkeletonSearch = () => {
     return (
-    <div className="relative bg-gray-500 flex flex-col lg:flex-row lg:justify-between lg:items-center px-5 sm:px-20 py-16 md:py-24 lg:py-[4.4rem] gap-4">
+    <div className="relative bg-gray-400 flex flex-col lg:flex-row lg:justify-between lg:items-center px-5 sm:px-20 py-16 md:py-24 lg:py-[4.4rem] gap-4">
         {/* Left section */}
         <div className="flex items-center rounded w-3/4 sm:w-[21.5%]">
             <div className="p-2 bg-gray-200 rounded-s w-full h-10 animate-pulse"></div>
-            <button className="bg-gray-300  font-medium py-2 px-3 rounded-e w-24 h-10 animate-pulse"></button>
+            <button className="bg-gray-500  font-medium py-2 px-3 rounded-e w-24 h-10 animate-pulse"></button>
         </div>
 
         {/* Right section */}

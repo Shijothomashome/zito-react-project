@@ -15,7 +15,7 @@ class About extends React.Component {
     }
     componentDidMount() {
         this.setState({ // updating state variables, as a result, render will work again
-            message: `" Celebrate the golden age of dining with us, where our commitment to quality and tradition has remained unwavering since our establishment in 1950."`
+            message: `" Celebrate the golden age of dining with us, where our commitment to quality and tradition has remained unwavering since our establishment in 1990."`
         })
     }
     render() {

@@ -28,7 +28,7 @@ const Body = () => {
       setAllRestaurants(json?.data?.cards?.[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
       setFilteredRestaurants(json?.data?.cards?.[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
 
-    }, 0)
+    }, 5000)
   }
 
   console.log(allRestaurants)

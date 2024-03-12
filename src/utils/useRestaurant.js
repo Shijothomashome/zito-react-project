@@ -7,6 +7,10 @@ import { useState, useEffect } from "react";
  */
 
 const useRestaurant = (id) => {
+
+  
+
+  
     const [restaurant, setRestaurant] = useState(null);
     const [restaurantMenu, setRestaurantMenu] = useState (null);
     console.log('useRestaurant called')
@@ -17,6 +21,7 @@ const useRestaurant = (id) => {
 
     async function getRestaurantInfo() {
         try {
+            setTimeout(async () => {
             const response = await fetch(`https://foodfire.onrender.com/api/menu?page-type=REGULAR_MENU&complete-menu=true&lat=21.1702401&lng=72.83106070000001&&submitAction=ENTER&restaurantId=${id}`);
             // const response = await fetch(`https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=9.58130&lng=76.52630&restaurantId=${id}&isMenuUx4=true&submitAction=ENTER`);
             const json = await response.json();
@@ -38,6 +43,7 @@ const useRestaurant = (id) => {
                 console.error("Restaurant information not found in the API response");
                 // Handle case where restaurant information is not found
             }
+        },5000)
         } catch (error) {
             console.error("Error fetching restaurant info:", error);
             // Handle error (e.g., show error message to the user)
@@ -47,6 +53,9 @@ const useRestaurant = (id) => {
     
 
     return [ restaurant,restaurantMenu ];
+
+
 }
+
 
 export default useRestaurant
